@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ar.com.dcsys.ear</groupId>
+  <artifactId>ear</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0</version>
+  <name>Aplicaciones Finales</name>
+
+  <modules>
+	<module>assistanceGti</module>
+  </modules>
+  
+  <properties>
+    <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+    <glassfish.home>/java/glassfish4/glassfish</glassfish.home>
+    <glassfish.passwd>${glassfish.home}/domains/domain1/config/domain-passwords</glassfish.passwd>
+    <servlet.version>3.1.0</servlet.version>
+    <cdi.version>1.1</cdi.version>
+    <weld.version>2.1.0.Final</weld.version>
+    <websockets.version>1.0</websockets.version>
+    <slf4j.version>1.7.5</slf4j.version>
+    <logback.version>1.0.13</logback.version>
+    <shiro.version>1.2.3</shiro.version>
+    <gwt.version>2.6.1</gwt.version>
+    <gwt.websockets.version>1.0.4</gwt.websockets.version>
+    <gin.version>2.1.2</gin.version>
+    <jetty.version>9.1.0.v20131115</jetty.version>
+    <junit.version>4.11</junit.version>
+    <guava.version>16.0.1</guava.version>
+    <java.version>1.7</java.version>
+    <jackson.version>2.3.0</jackson.version>
+    <dynamic-reports.version>3.2.0</dynamic-reports.version>
+    <gson.version>2.2.4</gson.version>
+    <piriti.version>0.10</piriti.version>
+    <totoe.version>0.7</totoe.version>
+    <tyrus.version>1.7</tyrus.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>  
+   
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+        <plugins>
+
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                  <source>${java.version}</source>
+                  <target>${java.version}</target>
+                </configuration>
+              </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+            </plugin>
+
+        </plugins>
+  </build>
+
+</project>
